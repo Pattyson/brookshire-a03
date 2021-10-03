@@ -6,7 +6,7 @@
 import java.util.Date;
 import java.util.Scanner;
 
-public class exercise40 {
+public class Solution40 {
 
     class Record {
         String firstName;
