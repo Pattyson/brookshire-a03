@@ -20,7 +20,7 @@ test {
 }
 
 application {
-    mainClass = 'Solution24'
+    mainClass = 'Solution35'
 }
 
 run {
