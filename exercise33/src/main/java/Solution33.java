@@ -3,32 +3,25 @@
  *  Copyright 2021 Patrick Brookshire
  */
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Solution33 {
 
     public static void main(String[] args) {
 
-        ArrayList<String> employees = new ArrayList<String>(Arrays.asList("John Smith","Jackie Jackson","Chris Jones","Amanda Cullen","Jeremy Goodwin"));
-        printEmployees(employees);
+        String[] responses = {"Yes","No","Maybe","Ask again later"};
+        Random random = new Random();
+        Scanner input = new Scanner(System.in);
 
-        Scanner sc = new Scanner(System.in);
+        System.out.println("What's your question?");
+        String question = input.nextLine();//get the question
+
+        int randomResponseIndex = random.nextInt(responses.length);
+
+        String response = responses[randomResponseIndex];
         System.out.println();
-        System.out.println("Enter an employee name to remove: ");
-        String nameToRemove = sc.nextLine();
-
-        employees.remove(nameToRemove);
-
+        System.out.println(response);
         System.out.println();
-        printEmployees(employees);
-    }
-
-    public static void printEmployees(ArrayList<String> employees) {
-        System.out.println("There are "+employees.size()+" employees: ");
-        for(String emp:employees) {
-            System.out.println(emp);
-        }
     }
 }
